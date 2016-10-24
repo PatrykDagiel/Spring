@@ -1,11 +1,14 @@
 package dagiel.entities;
 
+import javax.activation.DataSource;
+
 /**
  * Created by PatrykDagiel on 20.10.2016.
  */
 public class BaseballGame implements Game {
     private Team homeTeam;
     private Team awayTeam;
+    private DataSource dataSource;
 
     public BaseballGame() {}
 
@@ -38,6 +41,7 @@ public class BaseballGame implements Game {
     }
 
 
-
-
+    public void setDataSource(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 }

@@ -1,5 +1,7 @@
 package dagiel.entities;
 
+import javax.activation.DataSource;
+
 /**
  * Created by PatrykDagiel on 20.10.2016.
  */
