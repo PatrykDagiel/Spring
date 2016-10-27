@@ -22,25 +22,25 @@ import javax.sql.DataSource;
 // you want to be found on a component scan
 // @Resource - autowire by name
 
-@Configuration
-@ComponentScan(basePackages = "dagiel")
+//@Configuration
+//@ComponentScan(basePackages = "dagiel")
 public class AppConfig {
     //Autowire - by type first
-    @Autowired
-    private DataSource dataSource;
-
-    @Autowired @Qualifier("redSox")
-    private Team home;
-    @Resource
-    private Team cubs;
-
-    @Bean
-    public Game game() {
-        BaseballGame baseballGame = new BaseballGame(home, cubs);
-        baseballGame.setDataSource(dataSource);
-        return baseballGame;
-    }
-
+//    @Autowired
+//    private DataSource dataSource;
+//
+//    @Autowired @Qualifier("redSox")
+//    private Team home;
+//    @Resource
+//    private Team cubs;
+//
+//    @Bean
+//    public Game game() {
+//        BaseballGame baseballGame = new BaseballGame(home, cubs);
+//        baseballGame.setDataSource(dataSource);
+//        return baseballGame;
+//    }
+//
 
 
 }

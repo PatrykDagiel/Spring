@@ -9,10 +9,10 @@ import javax.sql.DataSource;
 /**
  * Created by PatrykDagiel on 24.10.2016.
  */
-@Configuration
+//@Configuration
 public class InfrastructureConfig {
-    @Bean
-    public DataSource dataSource() {
-        return new DriverManagerDataSource();
-    }
+//    @Bean
+//    public DataSource dataSource() {
+//        return new DriverManagerDataSource();
+//    }
 }
