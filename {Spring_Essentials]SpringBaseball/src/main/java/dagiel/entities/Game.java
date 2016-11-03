@@ -8,6 +8,7 @@ import javax.activation.DataSource;
 public interface Game {
     String playGame();
     Team getHomeTeam();
-
     Team getAwayTeam();
+    void setAwayTeam(Team z);
+    void setHomeTeam(Team w);
 }

@@ -1,6 +1,8 @@
 package dagiel.entities;
 
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.sql.DataSource;
 
 /**
@@ -18,11 +20,14 @@ public class BaseballGame implements Game {
         this.awayTeam = awayTeam;
     }
 
+
     public void setHomeTeam(Team homeTeam) {
+
         this.homeTeam = homeTeam;
     }
 
     public void setAwayTeam(Team awayTeam) {
+
         this.awayTeam = awayTeam;
     }
 
@@ -40,6 +45,23 @@ public class BaseballGame implements Game {
     public Team getAwayTeam() {
         return awayTeam;
     }
+
+
+    @Override
+    public String toString() {
+        return String.format("Game between %s at %s", homeTeam.getName(), awayTeam.getName());
+    }
+
+    @PostConstruct
+    public void startGame() {
+        System.out.println("Playing national anthem");
+    }
+
+    @PreDestroy
+    public void endGame() {
+        System.out.println("Sending highlights to MBL");
+    }
+
 
 
     public void setDataSource(DataSource dataSource) {
